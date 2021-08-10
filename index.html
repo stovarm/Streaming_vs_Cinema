@@ -18,22 +18,22 @@
         <form action="">
             <label for="QuantityMovies">How many movies or series do you watch on a month?</label>
             <input id="QuantityMovies" type="number" placeholder="Ex: 5">
-            <label>Select the Streaming Platforms</label>
-            <input id="PickNetflix" type="checkbox" value="4.2">
+             <label>Select the Streaming Platforms</label>
+            <input class="check" id="PickNetflix" type="checkbox" value="4.2">   <!-- La clase la agrego para tomar los valores en Js  -->          
             <label for="PickNetflix">Netflix</label>
-            <input id="PickAmazon" type="checkbox" value="3.7">
+            <input class="check" id="PickAmazon" type="checkbox" value="3.7"> <!-- El id lo pongo para linkearlo al label -->
             <label for="PickAmazon">Amazon Prime Video</label>
-            <input id="PickHbo" type="checkbox" value="3.5">
+            <input class="check" id="PickHbo" type="checkbox" value="3.5">     <!-- El value de cada uno es lo que valdría en Dolares cada plataforma, valores que se usan para las functions --> 
             <label for="PickHbo">HBO max</label>
-            <input id="PickDisney" type="checkbox" value="6">
+            <input class="check" id="PickDisney" type="checkbox" value="6">
             <label for="PickDisney">Disney+</label>
-            <button type="button" onclick="compareStreaming()" >Calculate</button>
+            <button type="button" onclick="compareStreaming()">Calculate</button>
         </form>
     </main>
     <section>
-        <label for="ResultPlatform"></label>
+        <label for="ResultPlatform">Total Platforms</label>
         <p id="ResultPlatform"></p>
-        <label for="ResultCinema"></label>
+        <label for="ResultCinema">Total Cinema</label>
         <p id="ResultCinema"></p>
         <p id="ResultCompare"></p>
     </section>
