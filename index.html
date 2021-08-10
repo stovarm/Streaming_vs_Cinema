@@ -18,9 +18,16 @@
         <form action="">
             <label for="QuantityMovies">How many movies or series do you watch on a month?</label>
             <input id="QuantityMovies" type="number" placeholder="Ex: 5">
-            <label for="PickPlatforms">Wich Streaming Platforms do you need for thoose Movies or Series?</label>
-            <input id="PickPlatforms" type="text">
-            <button type="button" >Calculate</button>
+            <label>Select the Streaming Platforms</label>
+            <input id="PickNetflix" type="checkbox">
+            <label for="PickNetflix">Netflix</label>
+            <input id="PickAmazon" type="checkbox">
+            <label for="PickAmazon">Amazon Prime Video</label>
+            <input id="PickHbo" type="checkbox">
+            <label for="PickHbo">HBO max</label>
+            <input id="PickDisney" type="checkbox">
+            <label for="PickDisney">Disney+</label>
+            <button type="button" onclick="compareStreaming()" >Calculate</button>
         </form>
     </main>
     <section>
