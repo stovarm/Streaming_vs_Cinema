@@ -55,5 +55,7 @@ function compareStreaming() {
 };
 
 
+
+
 console.log(compareStreaming());
 console.log(streaming);
