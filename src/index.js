@@ -1,11 +1,14 @@
-const ticketPrice = 4;     //Valor de un boleto de cine en dolares 
-function calculateCinema (movies, cost) {
-    const resultCinema = movies * cost;
-    return resultCinema;
-};
-
 function calculateStreaming() {
-    const checks = document.getElementsByClassName('check');   //Toma todos los checkbox
+
+    //Opción 1 -> lo aprendí analizando otros códigos.
+    /* const checks = document.getElementsByClassName('check');        //Toma todos los checkbox
+    const arrayChecks = Array.from(checks);                         //Transforme el HTML Collection (checks) a un Array
+    const elementsChecked = arrayChecks.filter((element) => element.checked); //Filtro los valores dentro del array que están checked
+    const totalStreaming = elementsChecked.reduce((sum, item) => sum += Number(item.value), 0)  //Sumos los valores dentro del array.
+    return totalStreaming; */
+
+    //Opcion 2  -> mi idea principal  
+    const checks = document.getElementsByClassName('check');   //Toma todos los checkbox con la class=check
     let totalStreaming = 0;
     for ( i = 0; i < 4; i++) {    //Iterar en las posiciones del array que tenemos de los checkbox
         if (checks[i].checked === true) {   //Validar si la posición [i] dentro del array está chuleada (el check activo)
@@ -18,26 +21,20 @@ function calculateStreaming() {
 function compareStreaming() {     //Esta funcion es la que activa el Botón
     let inputMovies = document.getElementById("QuantityMovies");        // Tomar el valor que ingresa el usuario de cuantas peliculas en el input
     let movies = inputMovies.value;    //tomar el valor del input
-    const resultCinema = calculateCinema (movies, ticketPrice); 
+    debugger
+    const resultCinema = movies * 4; //4 dolares cada ticket
     const resultStreaming = calculateStreaming();
     const resultCompare = resultCinema - resultStreaming;
+    
+    const resultPlatform = document.getElementById("ResultPlatform");  //Enlazar la const con el elemento p donde voy a dar el resultado
+    resultPlatform.innerText = " $" + resultStreaming; //Escribir en HTML desde JS
+    const resultMovies = document.getElementById("ResultCinema");
+    resultMovies.innerText = " $" + resultCinema;
 
     if(resultCompare > 0){  //Si el resultado es Positivo quiere decir que El total que se paga por ir a Cine es Mayor al de pagar las plataformas seleccionadas.
-        const resultPlatform = document.getElementById("ResultPlatform");  //Enlazar la const con el elemento p donde voy a dar el resultado
-        resultPlatform.innerText = " $" + resultStreaming; //Escribir en HTML desde JS
-
-        const resultMovies = document.getElementById("ResultCinema");
-        resultMovies.innerText = " $" + resultCinema;
-
         const Compare = document.getElementById("ResultCompare")
         Compare.innerText = "It's better pay the Platforms";
-    } else {
-        const resultPlatform = document.getElementById("ResultPlatform");
-        resultPlatform.innerText = " $" + resultStreaming;
-
-        const resultMovies = document.getElementById("ResultCinema");
-        resultMovies.innerText = " $" + resultCinema;
-        
+    } else {        
         const Compare = document.getElementById("ResultCompare")
         Compare.innerText = "It's better go to the Cinema";        
     };
