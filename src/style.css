@@ -60,6 +60,7 @@ main form {
     font-size: 1.5rem;
     align-items: center;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 main form input {
