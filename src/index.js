@@ -32,9 +32,9 @@ function compareStreaming() {     //Esta funcion es la que activa el Botón
 
     if(resultCompare > 0){  //Si el resultado es Positivo quiere decir que El total que se paga por ir a Cine es Mayor al de pagar las plataformas seleccionadas.
         const Compare = document.getElementById("ResultCompare")
-        Compare.innerText = "It's better pay the Platforms";
+        Compare.innerText = "It's better to pay the Platforms";
     } else {        
         const Compare = document.getElementById("ResultCompare")
-        Compare.innerText = "It's better go to the Cinema";        
+        Compare.innerText = "It's better to go to the Cinema";        
     };
 };
