@@ -21,7 +21,6 @@ function calculateStreaming() {
 function compareStreaming() {     //Esta funcion es la que activa el Botón
     let inputMovies = document.getElementById("QuantityMovies");        // Tomar el valor que ingresa el usuario de cuantas peliculas en el input
     let movies = inputMovies.value;    //tomar el valor del input
-    debugger
     const resultCinema = movies * 4; //4 dolares cada ticket
     const resultStreaming = calculateStreaming();
     const resultCompare = resultCinema - resultStreaming;

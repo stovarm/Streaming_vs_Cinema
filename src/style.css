@@ -6,4 +6,144 @@
 
 html {
     font-size: 62.5%;
+    font-family: serif;
+    color: rgb(255, 255, 255);  
 }
+h1 {
+    font-size: 2rem;
+    width: max-content;
+}
+body {
+    background: linear-gradient(#78d2fc , #3333ca);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+header a .logo {
+    width: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    border-radius: 3rem;
+    border: 3px solid whitesmoke;
+    width: 30rem;
+    align-items: center;
+    min-height: 54rem;
+    justify-content: space-around;
+    
+}
+
+main form {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+main form label {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+main form input {
+    margin-top: 1rem;
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0.2rem solid white;
+    padding: 0px 1.5rem;
+    outline: none;
+    height: 2.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    font-size: 1.5rem;
+}
+
+main form .main-form-label__select {
+    font-size: 2rem;
+}
+
+main form button {
+    border-radius: 3rem;
+    width: min-content;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    align-self: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 1rem 0px;
+    font-size: 1.5rem;
+    height: 3rem;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+main section label {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+main section p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main section #ResultCompare {
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+    border-radius: 2rem;
+    padding: 0.2rem 0rem;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.github {
+    width: 1.5rem;
+}
+
+.ig {
+    width: 1.5rem;
+}
+
+
+
+/* 
+    600 a 1000 tablets
+    1000 pc
+*/
